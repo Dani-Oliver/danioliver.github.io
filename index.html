@@ -1,15 +1,70 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-        <meta chorset="UTF-8">
-        <meta mome="viewport" content="widnt-divice-width", initial-scale="1.0">
-        <title>Variavel</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
+    <title>Loja de Vendas</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/1.0.1/slideout.min.js"></script>
 </head>
 <body>
-        <input type="test" id="userInput">
-        <button onclick="armazenarValor()">Armazenar</button>
-        <p id="valorInserido"></p>
+    <div class="menu" id="menu">
+        <header>
+            <ul>
+                <li><a href="index.html">INÍCIO</a></li>
+                <li><a href="indexcontato.html">CONTATO</a></li>
+                <li><a href="indexsobre.html">SOBRE</a></li>                               
+            </ul>
+        </header>
+    </div>
+    <div class="content" id="content">
+        <div class="toggle-button" id="toggle-button">Suporte</div>
+            <section class="hero">
+                <h1>Seja bem-vindo a LOJA DE VENDAS JS</h1>
+                <p>Aqui você encontra o que esta preocurando para VOCÊ e para sua CASA</p>
+            </section>
         
+        <main>
+            <section class="products">
+                <h2>Produtos em destaque</h2>
+                <div class="product-grid">
+                    <!-- Aqui serão inseridos os produtos pelo JS-->>
+                </div>
+            </section>
+
+            <section class="cart">
+                <h2>Carrinho de compras</h2>
+                <table>
+                    <thread>
+                        <tr>
+                            <th>Produtos</th>
+                            <th>Quantidade</th>
+                            <th>Preço</th>
+                            <th>Subtotal</th>
+                        </tr>
+                    </thread>
+                    <tbody>
+                        <!--Aqui serão os itens do carrinho pelo JS-->
+                    </tbody>
+                </table>
+                <p>Total: <span id="total">R$0.00</span></p>
+                <button id="checkout">Pagar</button>
+            </section>
+        </main>
+            <footer>
+                <p>&copy; 2026 EBAC LOJA v2</p>
+            </footer>
         <script src="script.js"></script>
+    </div>
+    <script>
+        var menu = document.getElementById('menu');
+        var content =  document.getElementById('content');
+        var togglebutton = document.getElementById('toggle-button');
+
+        togglebutton.addEventListener('click', function() {
+            menu.classList.toggle('is-open');
+            content.classList.toggle('is-open');
+        });
+    </script>
 </body>
 </html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre | LOJA DE VENDAS</title>
+    <link rel="stylesheet" href="stylessobre.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/1.0.1/slideout.min.js"></script>
+</head>
+<body>
+    <div class="menu" id="menu">
+        <header>
+            <ul>
+                <li><a href="index.html">INÍCIO</a></li>
+                <li><a href="indexcontato.html">CONTATO</a></li>
+                <li><a href="indexsobre.html">SOBRE</a></li>                               
+            </ul>
+        </header>
+    </div>
+    <div class="content" id="content">
+        <div class="toggle-button" id="toggle-button">Menu</div>
+        <section id="about">
+            <div class="container">
+                <h2>Sobre a loja</h2>
+                <p>Esse é um prototipo de loja de vendas online.</p>
+            </div>
+        </section>
+        <footer>
+            <p>&copy; 2026 EBAC LOJA v2</p>
+        </footer>
+        <script src="scriptcontact.js"></script>
+    </div>
+    <script>
+        var menu = document.getElementById('menu');
+        var content =  document.getElementById('content');
+        var togglebutton = document.getElementById('toggle-button');
+
+        togglebutton.addEventListener('click', function() {
+            menu.classList.toggle('is-open');
+            content.classList.toggle('is-open');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,167 @@
+body  {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color:rgb(251, 248, 248);
+}
+
+header {
+    background-color: linear-gradient( to right rgb(165, 42, 42), rgb(251, 248, 248));
+    color: rgb(214, 212, 212);
+    padding: 20px;
+    text-align: center;
+}
+
+.hero {
+    background-image: radial-gradient(circle  , rgb(165, 42, 42), rgb(251, 248, 248));
+    padding: 100;
+    text-align: center;
+    color: rgb(3, 3, 3);
+}
+
+.hero button {
+    background-color: rgb(165, 42, 42);
+    color: rgb(51, 51, 51);
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.hero button:hover {
+    color: rgb(255, 153, 0);
+}
+
+.product {
+    padding: 30px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.produt {
+    background-color: rgb(254, 254, 254);
+    padding: 30px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+}
+
+.product img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.product h3 {
+    font-size: 18px;
+    margin-top: 0;
+}
+
+.product p {
+    font-size: 14px;
+    color: rgb(245, 7, 7);
+}
+
+.cart {
+    padding: 20px;
+}
+
+.cart table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.cart th,.cart td {
+    border: 1px solid rgb(165, 42, 42);
+    padding: 5px;
+    text-align: left;
+    background-color: black;
+    color: white;
+}
+
+.cart td:last-child {
+    text-align: right;
+}
+
+#total {
+    font-weight: bold;
+}
+
+#checkout {
+    background-color: #333;
+    color: rgb(250, 248, 248);
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+#checkout:hover {
+    background-color: rgb(165, 42, 42);
+}
+
+footer {
+    background-color: rgb(10, 10, 10);
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    clear: both;
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 256px;
+    background:linear-gradient(to right, rgb(165, 42, 42), rgb(251, 248, 248));
+    color: rgb(255, 255, 255);
+    z-index: 1;
+    transform: translate(-100%);
+    transition: transform 0.3s ease;
+}
+
+.menu :hover {
+    color: rgb(15, 15, 14);
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+        
+.menu ul li {
+    padding: 15px;
+    border-bottom: 1px solid rgb(23, 22, 22);
+}
+        
+.menu ul li a {
+    color: rgb(240, 240, 239);
+    text-decoration: none;
+}
+
+.menu.is-open {
+    transform: translateX(0);
+}
+        
+.content {
+    padding: 20px;
+    transition: transform 0.3 ease;
+}
+        
+.content.is-open {
+    transform: translateX(256px);
+}
+        
+.toggle-button {
+    display: inline-block;
+    margin: 20px;
+    padding: 10px 20px;
+    background-color: rgb(68, 68, 68);
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
